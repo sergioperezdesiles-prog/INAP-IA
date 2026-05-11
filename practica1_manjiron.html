@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjirón - Comunidad de Madrid</title>
+    <style>
+        :root {
+            --primary: #2d5a27;
+            --accent: #d4a373;
+            --text: #333;
+            --light-bg: #f9f7f2;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text);
+        }
+        /* Barra superior requerida */
+        .inap-header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-bottom: 4px solid var(--accent);
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('http://googleusercontent.com/image_collection/image_retrieval/10454528184026544678_0') center/cover;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        header h1 { font-size: 4rem; margin: 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        header p { font-size: 1.5rem; margin-top: 10px; font-style: italic; }
+        
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
+        
+        .card {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .history-text p { line-height: 1.8; text-align: justify; margin-bottom: 20px; }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+        .gallery-item:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .gallery-item img { width: 100%; height: 280px; object-fit: cover; }
+        .gallery-item div { padding: 20px; text-align: center; font-weight: bold; color: var(--primary); }
+        
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .history-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.5rem; }
+            .card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="inap-header">
+    Sergio Pérez de Siles Briones - Curso de IA - INAP
+</div>
+
+<header>
+    <h1>Manjirón</h1>
+    <p>Corazón de la Sierra Norte de Madrid</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Un Viaje por la Historia</h2>
+        <div class="history-grid">
+            <div class="history-text">
+                <p>Manjirón es un rincón privilegiado de la Comunidad de Madrid, cabecera del actual municipio de <strong>Puentes Viejas</strong>. Sus orígenes se remontan a la repoblación cristiana tras la Reconquista, formando parte de la histórica <em>Comunidad de Villa y Tierra de Buitrago</em>.</p>
+                <p>Durante siglos, estuvo bajo la jurisdicción de la poderosa <strong>Casa de Mendoza</strong>. La arquitectura del pueblo refleja esta historia, con sus casas construidas en piedra de sillería y mampostería, diseñadas para resistir el rigor del clima serrano.</p>
+                <p>El hito más transformador de su historia moderna fue la construcción del sistema de embalses del Lozoya (El Villar y Puentes Viejas), que definió su carácter actual.</p>
+            </div>
+            <div class="history-img">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/1286680601708695892_0" style="width:100%; border-radius:10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" alt="Ayuntamiento">
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Patrimonio y Entorno Natural</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10058265132605859637_0" alt="Iglesia de Santiago">
+                <div>Iglesia de Santiago Apóstol (S. XVI)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/7639198851255914784_0" alt="Embalse de Puentes Viejas">
+                <div>Embalse de Puentes Viejas</div>
+            </div>
+            <div class="gallery-item">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/10454528184026544678_0" alt="Panorámica de Manjirón">
+                <div>Paisajes de la Sierra Norte</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Manjirón, Puentes Viejas. Madrid, España.</p>
+    <p>Proyecto desarrollado para el INAP.</p>
+</footer>
+
+</body>
+</html>
